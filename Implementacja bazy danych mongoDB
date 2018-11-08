@@ -1,0 +1,18 @@
+Implementacja bazy danych mongoDB
+
+w katalogu bin wpisujemy komendę
+	sudo ./mongod --dbpath ~/mongo-data
+
+Następnie	
+	./mongo
+
+
+Utworzenie przykałdowego obiektu
+	db.Todos.insert({text: 'kurs mongo'})
+Odczytanie danych 
+	db.Todos.find()
+
+
+w Projkecie instalujemy mongoDB za pomocą komendy	
+@2.2.5 - to wersja mongodb, której używal ziomek z kursu
+	npm install mongodb@2.2.5 --save

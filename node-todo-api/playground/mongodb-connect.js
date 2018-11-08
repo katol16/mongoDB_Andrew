@@ -40,22 +40,22 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     });
 
     // Zadanie z kursu
-    db.collection('Users').insertOne({
-        // _id: 123,
-        name: "Karol",
-        age: 27,
-        location: "Narol"
-    }, (err, result) => {
-        if (err) {
-            return console.log('Unable to insert users'+err)
-        }
-
-        // w result.ops, będziemy mieli nasz obiekt
-        console.log(JSON.stringify(result.ops, undefined, 2));
-        // w _id mamy tak zwany timestamp, który możemy pobrać/oczytać
-        // w ten sposób możemy też sprawdzić kiedy collection została utwprzona
-        console.log(result.ops[0]._id.getTimestamp());
-    });
+    // db.collection('Users').insertOne({
+    //     // _id: 123,
+    //     name: "Karol",
+    //     age: 27,
+    //     location: "Narol"
+    // }, (err, result) => {
+    //     if (err) {
+    //         return console.log('Unable to insert users'+err)
+    //     }
+    //
+    //     // w result.ops, będziemy mieli nasz obiekt
+    //     console.log(JSON.stringify(result.ops, undefined, 2));
+    //     // w _id mamy tak zwany timestamp, który możemy pobrać/oczytać
+    //     // w ten sposób możemy też sprawdzić kiedy collection została utwprzona
+    //     console.log(result.ops[0]._id.getTimestamp());
+    // });
 
     // Zamykamy połączenie
     db.close();
