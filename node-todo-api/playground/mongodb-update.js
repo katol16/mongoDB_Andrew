@@ -9,13 +9,34 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     console.log('Connected to MongoDB');
 
     // findOneAndUpdate
-    db.collection('Todos').findOneAndUpdate({
-        _id: new ObjectID("5be4936b052f04860a9dc9dc")
-    }, {
-        // Tutaj musimy użyć tzw. "update operators" - w tym przypadku "$set"
-        // samo completed: true bez $set, by nie zadziałało
-        $set: {
-            completed: true
+    // db.collection('Todos').findOneAndUpdate({
+    //     _id: new ObjectID("5be4936b052f04860a9dc9dc")
+    // }, {
+    //     // Tutaj musimy użyć tzw. "update operators" - w tym przypadku "$set"
+    //     // samo completed: true bez $set, by nie zadziałało
+    //     $set: {
+    //         completed: true
+    //     }
+    // }, {
+    //     returnOriginal: false
+    // }).then(result => {
+    //     console.log(result);
+    // });
+
+    // Challange
+    // db.collection('Users').findOneAndUpdate({name: "Karol"}, {
+    //     $set: {
+    //         name: "Przemek"
+    //     }
+    // }, {
+    //     returnOriginal: false
+    // }).then(result => {
+    //    console.log(result);
+    // });
+
+    db.collection('Users').findOneAndUpdate({name: "Przemek"}, {
+        $inc: {
+            age: +1
         }
     }, {
         returnOriginal: false
@@ -27,26 +48,6 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     // db.close();
 });
 
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
-// Skończyłeś na 6:39 Wykład 68
 
 
 

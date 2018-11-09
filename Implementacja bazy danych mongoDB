@@ -16,3 +16,8 @@ Odczytanie danych
 w Projkecie instalujemy mongoDB za pomocą komendy	
 @2.2.5 - to wersja mongodb, której używal ziomek z kursu
 	npm install mongodb@2.2.5 --save
+
+
+Instalacja mongoose
+	npm i mongoose@4.5.9 --save
+W kursie isntalował powyższą wersję, ale my zaisntalujemy najnowszą
