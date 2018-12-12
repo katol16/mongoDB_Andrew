@@ -65,5 +65,5 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 // po prostu przypisujac mu wartość np: _id: 123
 
 // UWAGA!!!
-// Jeżeli będziesz używał nowszejw ersji mongoDB, to ten kod będzie troche inny, masz w kursie jak będzie wyglądał!
+// Jeżeli będziesz używał nowsze jwersji mongoDB, to ten kod będzie troche inny, masz w kursie jak będzie wyglądał!
 // Lekcja 63!
